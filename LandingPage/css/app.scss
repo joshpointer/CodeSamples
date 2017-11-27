@@ -1,0 +1,66 @@
+$enable-rounded: false;
+$blue: #0073b0;
+$green: #01a503;
+$yellow: #ffc107;
+$info: #83c4dd;
+
+@import "~bootstrap/scss/bootstrap";
+
+$maxwidth-xs: 575px;
+$maxwidth-sm: 767px;
+$maxwidth-md: 991px;
+$maxwidth-lg: 1199px;
+
+body {
+	background-color: #005d8c;
+	color: #ffffff;
+}
+
+header .logo {
+	height: 50px;
+	margin-top: 25px;
+	@media ( max-width: $maxwidth-sm ) {
+		height: 35px;
+	}
+}
+
+header h1 {
+	padding-top: 50px;
+	font-size: 3em;
+	font-weight: 100;
+	@media ( max-width: $maxwidth-sm ) {
+		padding-top: 30px;
+		font-size: 1.65em;
+	}
+}
+
+header .content {
+	padding-top: 25px;
+	font-size: 1.5em;
+	font-weight: 100;
+	text-align: left;
+	@media ( max-width: $maxwidth-sm ) {
+		padding-top: 15px;
+		font-size: 1.25em;
+	}
+}
+
+.lead-collector {
+	padding-top: 50px;
+	width: 100%;
+	max-width: 500px;
+	margin: auto;
+	input {
+		margin-bottom: 2px;
+	}
+	a {
+		margin-bottom: 15px;
+	}
+	@media ( max-width: $maxwidth-sm ) {
+		padding-top: 25px;
+	}
+}
+
+.icon {
+	width: 35px;
+}
