@@ -1,0 +1,93 @@
+<div class="panel panel-default">
+
+	<div class="panel-heading">
+
+		<div class="row">
+
+			<div class="col-md-2 col-md-offset-8"
+				 style="margin-top:2px;margin-bottom:2px">
+				<button type="button"
+						class="btn btn-default btn-sm"
+						style="width:100%"
+						ng-click="cancelNewPayments()">
+					Cancel
+				</button>
+			</div>
+
+			<div class="col-md-2"
+				 style="margin-top:2px;margin-bottom:2px">
+				<button type="button"
+						class="btn btn-primary btn-sm"
+						style="width:100%"
+					    ng-click="saveWarehousePriorities()">
+					Save Changes
+				</button>
+			</div>
+
+		</div>
+
+	</div>
+
+	<div class="panel-body">
+
+		<div class="row">
+			<div class="col-md-2">
+				<div id="warehouseColorKey" style="width:120px">
+					<ul>
+						<li ng-repeat="warehouseNumber in warehousePriorities.warehouses"
+							ng-class="getWarehouseClass(warehouseNumber)"
+							ng-style="! $last ? { 'border-bottom': 0 } : ''">
+							<span ng-if="warehouseNumber === 0">None</span>
+							<span ng-if="warehouseNumber !== 0">{{ warehouseNumber }}</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-8">
+				<div wss-jqv-map
+					 id="map"
+					 ng-click="showWarehouseMenu($event)"
+					 style="width:750px;height:500px;margin:0 auto"></div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<br>
+				<div class="btn-group btn-group-justified">
+					<a class="btn btn-default"
+					   ng-class="ui.map.currentPriorityIndex === 0 ? 'active' : ''"
+					   ng-click="setCurrentPriorityIndex(0)">
+						Primary
+					</a>
+					<a class="btn btn-default"
+					   ng-class="ui.map.currentPriorityIndex === 1 ? 'active' : ''"
+					   ng-click="setCurrentPriorityIndex(1)">
+					   	Secondary
+					</a>
+					<a class="btn btn-default"
+					   ng-class="ui.map.currentPriorityIndex === 2 ? 'active' : ''"
+					   ng-click="setCurrentPriorityIndex(2)">
+						Third
+					</a>
+					<a class="btn btn-default"
+					   ng-class="ui.map.currentPriorityIndex === 3 ? 'active' : ''"
+					   ng-click="setCurrentPriorityIndex(3)">
+						Fourth
+					</a>
+					<a class="btn btn-default"
+					   ng-class="ui.map.currentPriorityIndex === 4 ? 'active' : ''"
+					   ng-click="setCurrentPriorityIndex(4)">
+						Fifth
+					</a>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="panel-footer">
+		&nbsp;
+	</div>
+
+</div>

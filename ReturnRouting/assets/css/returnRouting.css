@@ -1,0 +1,87 @@
+.btn {
+	overflow: hidden !important;
+}
+
+/* Overriding Bootstrap's default label background to lighten it up */
+.label-default {
+	background-color: #cccccc;
+}
+
+button {
+	outline: none !important;
+}
+
+form {
+	margin: 0;
+}
+
+label h4 {
+	margin-bottom: 0.2em;
+}
+
+label h4.required:after {
+	content: ' *';
+	color: red;
+}
+
+hr {
+	border-color: #dddddd;
+	width: 98%;
+}
+
+div#navigationRow {
+	margin-top: 20px;
+}
+
+ol.breadcrumb {
+	background: inherit;
+}
+
+ol.breadcrumb a {
+	cursor: pointer;
+}
+
+div#headerRow {
+	margin-bottom: 20px;
+	font-size: 1.25em;
+}
+
+div#headerRow h3 {
+	display: inline-block;
+	margin: 0;
+	margin-right: 15px;
+	vertical-align: middle;
+}
+
+#warehouseMenu {
+	padding: 15px;
+	position: absolute;
+	display: none;
+	z-index: 1000;
+}
+
+#warehouseColorKey {
+	padding: 15px;
+}
+
+#warehouseMenu ul, #warehouseMenu li, #warehouseColorKey ul, #warehouseColorKey li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#warehouseMenu li, #warehouseColorKey li {
+	border: solid 1px black;
+	clear: both;
+	padding: 0 0.5em;
+	text-align: center;
+	cursor: pointer;
+}
+
+#warehouseColorKey li {
+	cursor: inherit;
+}
+
+#warehouseMenu li:hover {
+	background-color: #c9dfaf;
+}
